@@ -12,6 +12,17 @@ nav {
 .about-nav__input {
   border: none;
   font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  width: 25%;
+}
+.home-nav__input:hover,
+.resume-nav__input:hover,
+.projects-nav__input:hover,
+.about-nav__input:hover {
+ background: black;
+ color: white;
 }
 
 .landing-background__image {

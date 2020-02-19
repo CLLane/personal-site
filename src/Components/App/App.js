@@ -17,6 +17,7 @@ function App() {
         ></img>
         <p>This is Chris Lane's Website</p>
       </div>
+      {/* <Resume></Resume> */}
     </div>
   );
 }
