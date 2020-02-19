@@ -16,7 +16,7 @@ function App() {
           className="landing-background__image"
           src="https://cdn.pixabay.com/photo/2020/01/20/11/28/fantasy-4780122_1280.jpg"
         ></img>
-        <p>This is Chris Lane's Website</p>
+        <p className="landing-text__p">This is Chris Lane's Website</p>
       </div>
       <Resume></Resume>
     </div>

@@ -38,7 +38,7 @@ nav {
   text-align: center;
 }
 
-p {
+.landing-text__p {
   position: absolute;
   width: 100%;
   text-align: center;
