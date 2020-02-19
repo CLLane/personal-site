@@ -1,9 +1,12 @@
 nav {
+  overflow: hidden;
+  position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 7vh;
   width: 100%;
+  z-index: 100;
 }
 
 .home-nav__input,

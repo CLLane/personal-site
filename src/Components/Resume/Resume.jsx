@@ -4,7 +4,7 @@ export const Resume = () => {
 
   return (
     <div>
-      
+      Hey
     </div>
   )
 }
