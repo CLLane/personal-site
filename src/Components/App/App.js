@@ -1,4 +1,5 @@
 import React from "react";
+import {Resume} from '../Resume/Resume'
 import "./App.css";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         ></img>
         <p>This is Chris Lane's Website</p>
       </div>
-      {/* <Resume></Resume> */}
+      <Resume></Resume>
     </div>
   );
 }
