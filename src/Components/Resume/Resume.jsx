@@ -4,9 +4,10 @@ export const Resume = () => {
 
   return (
     <div>
-      Hey
-      <p>1</p>
-      <p>1</p>
+      <h2>Education</h2>
+      <ul>
+        <li>Certificate in Web Application Development from Turing Software School</li>
+      </ul>
       <p>1</p>
       <p>1</p>
       <p>1</p>
