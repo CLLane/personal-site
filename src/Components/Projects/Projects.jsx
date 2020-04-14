@@ -7,7 +7,7 @@ export const Projects = () => {
       <h1>PROJECTS</h1>
       <div className="project-container__div">
         <h2>Color Picker</h2>
-        <img src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF"></img>
+        <img src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF" class='project-image'></img>
         <p>
           A random hex-code generator that allows a user to create projects and
           save palettes to projects. The app allows user to login or create a
