@@ -7,7 +7,10 @@ export const Projects = () => {
       <h1>PROJECTS</h1>
       <div className="project-container__div">
         <h2>Color Picker</h2>
-        <img src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF" class='project-image'></img>
+        <img
+          src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF"
+          class="project-image"
+        ></img>
         <p>
           A random hex-code generator that allows a user to create projects and
           save palettes to projects. The app allows user to login or create a
@@ -20,12 +23,41 @@ export const Projects = () => {
           projects. The users projects and palettes. The user can utilze a
           button to logout, see all palettes, and lock hex-codes they like.
         </p>
-        <div className='stack-container__div'>
+        <div className="stack-container__div">
           <h3>TechStack</h3>
           <ul>
             <li>React</li>
             <li>React Router</li>
             <li>React Hooks</li>
+            <li>Jest</li>
+            <li>Enzyme</li>
+          </ul>
+        </div>
+      </div>
+      <div className="project-container__div">
+        <h2>Color Picker</h2>
+        <img
+          src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/Home.png?itok=988q-cEX"
+          class="project-image"
+        ></img>
+        <p>
+          Launch Log, was built over the course of six days utilizing an agile
+          workflow, and allows users to search the Launch Library API for
+          upcoming space launches around the world as well as do research into
+          companies, specific rockets, and missions. The application is
+          bootstrapped with Create React App utilizes React Router for page
+          navigation, Redux to assist in data management, PropTypes to ensure
+          the correct data types are passed within the program, and a testing
+          suite utilizing Enzyme and Jest. Tests cover UI changes, event
+          simulation, async fetch calls, React state changes, and Redux store
+          updates.
+        </p>
+        <div className="stack-container__div">
+          <h3>TechStack</h3>
+          <ul>
+            <li>React</li>
+            <li>React Router</li>
+            <li>Redux</li>
             <li>Jest</li>
             <li>Enzyme</li>
           </ul>
