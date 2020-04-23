@@ -1,11 +1,10 @@
 import React from "react";
+import Cv from '../../../src/Images/chris-lane-resume.jpg'
 
 export const Resume = () => {
   return (
-    <iframe
-      src="https://drive.google.com/drive/u/0/my-drive"
-      width="100%"
-      height="500px"
-    ></iframe>
+    <img
+      src={Cv}
+    ></img>
   );
 }

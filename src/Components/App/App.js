@@ -22,6 +22,7 @@ function App() {
       </div>
       <Bio></Bio>
       <Projects></Projects>
+      <Resume></Resume>
     </div>
   );
 }
