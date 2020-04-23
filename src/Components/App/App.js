@@ -1,6 +1,7 @@
 import React from "react";
 import {Bio} from '../Bio/Bio'
 import {Projects} from '../Projects/Projects'
+import {Resume} from '../Resume/Resume'
 import "./App.css";
 
 function App() {
