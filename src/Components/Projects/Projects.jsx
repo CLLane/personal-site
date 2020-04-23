@@ -63,6 +63,10 @@ export const Projects = () => {
           </ul>
         </div>
       </div>
+      <h3>
+        Checkout out my other Projects on{" "}
+        <a href="https://github.com/CLLane">Github</a>{" "}
+      </h3>
     </div>
   );
 };
