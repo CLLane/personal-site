@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
+import Cv from '../../../src/Images/chris-lane-resume.jpg'
 
 export const Resume = () => {
-
   return (
-    <div>
-      
-    </div>
-  )
+    <img
+      src={Cv}
+    ></img>
+  );
 }

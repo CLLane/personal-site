@@ -1,9 +1,12 @@
 nav {
+  overflow: hidden;
+  position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 7vh;
   width: 100%;
+  z-index: 100;
 }
 
 .home-nav__input,
@@ -35,7 +38,7 @@ nav {
   text-align: center;
 }
 
-p {
+.landing-text__p {
   position: absolute;
   width: 100%;
   text-align: center;
