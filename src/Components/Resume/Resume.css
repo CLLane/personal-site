@@ -1,0 +1,10 @@
+.resume_container {
+  text-align: center;
+}
+
+.resume_pdf {
+  height: 50%;
+  width: 50%;
+  border: solid black 5px;
+  border-radius: 8px;
+}
