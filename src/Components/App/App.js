@@ -1,4 +1,5 @@
 import React from "react";
+import { Router, Route, Link } from 'react-router';
 import {Bio} from '../Bio/Bio'
 import {Projects} from '../Projects/Projects'
 import {Resume} from '../Resume/Resume'
