@@ -15,12 +15,29 @@ class App extends Component {
 
   changePage = (e) => {
     e.preventDefault();
-    let oldalue = this.state.landingStatus
+    let oldValue = this.state.landingStatus
     console.log('hey :>> ')
     this.setState({landingStatus: !oldValue})
   };
 
   render() {
+    if(this.state.landingStatus === false) {
+       return (
+      <div>
+        <nav>
+          <Link to ='/' onClick={this.changePage} className="home-nav__link" value="" type="button">Home</Link>
+          <Link className="resume-nav__link" to="/Resume">
+            Resume
+          </Link>
+          <Link className="projects-nav__link" to="/Projects">
+            Projects
+          </Link>
+          <Link className="about-nav__link" to="/Bio">
+            About
+          </Link>
+        </nav>
+      </div>)
+    } else {
     return (
       <div>
         <nav>
@@ -48,6 +65,7 @@ class App extends Component {
       </div>
     );
   }
+}
 }
 
 export default App;
