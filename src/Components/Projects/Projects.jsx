@@ -38,7 +38,7 @@ export const Projects = () => {
         <h2>Color Picker</h2>
         <img
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/Home.png?itok=988q-cEX"
-          class="project-image"
+          className="project-image"
         ></img>
         <p>
           Launch Log, was built over the course of six days utilizing an agile
