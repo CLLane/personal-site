@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Link } from 'react-router';
+import { Route, Link } from 'react-router-dom';
 import {Bio} from '../Bio/Bio'
 import {Projects} from '../Projects/Projects'
 import {Resume} from '../Resume/Resume'
@@ -9,22 +9,22 @@ function App() {
   return (
     <div>
       <nav>
-        <input className="home-nav__input" value="Home" type="button"></input>
-        <input
-          className="resume-nav__input"
-          value="Resume"
-          type="button"
-        ></input>
-        <input
-          className="projects-nav__input"
-          value="Projects"
-          type="button"
-        ></input>
-        <input
-          className="about-nav__input"
-          value="About Me"
-          type="button"
-        ></input>
+        <Link className="home-nav__link" value="Home" type="button"></Link>
+        <Link
+          className="resume-nav__link"
+          to = "/Resume"
+    
+        >Resume</Link>
+        <Link
+          className="projects-nav__link"
+          to = "/Projects"
+         
+        >Projects</Link>
+        <Link
+          className="about-nav__link"
+          to = "/Bio"
+          
+        >About</Link>
       </nav>
       <div className="landing-img__div">
         <img
@@ -33,9 +33,9 @@ function App() {
         ></img>
         <p className="landing-text__p">This is Chris Lane's Website</p>
       </div>
-      <Bio></Bio>
-      <Projects></Projects>
-      <Resume></Resume>
+      <Route exact={true} path="/Bio" component={Bio}/>
+      <Route exact={true} path="/Projects" component={Projects} />
+      <Route exact={true} path="/Resume" component={Resume}/>
     </div>
   );
 }

@@ -9,10 +9,10 @@ nav {
   z-index: 100;
 }
 
-.home-nav__input,
-.resume-nav__input,
-.projects-nav__input,
-.about-nav__input {
+.home-nav__link,
+.resume-nav__link,
+.projects-nav__link,
+.about-nav__link {
   border: none;
   font-size: 19px;
   text-align: center;
@@ -20,10 +20,10 @@ nav {
   height: 100%;
   width: 25%;
 }
-.home-nav__input:hover,
-.resume-nav__input:hover,
-.projects-nav__input:hover,
-.about-nav__input:hover {
+.home-nav__link:hover,
+.resume-nav__link:hover,
+.projects-nav__link:hover,
+.about-nav__link:hover {
  background: black;
  color: white;
 }
