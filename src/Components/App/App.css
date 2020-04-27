@@ -1,31 +1,104 @@
-nav {
-  overflow: hidden;
-  position: fixed;
+p {
+  font-size: 20px;
+}
+main {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 7vh;
-  width: 100%;
-  z-index: 100;
+  flex-direction: column;
+}
+.submit_button {
+  width: 10vw;
+  border-radius: 0 10px 10px 0;
+  background: blue;
+}
+.user_input {
+  border: 0.5px solid grey;
+  width: 30vw;
+  height: 10vh;
+  border-radius: 8px 0px 0px 6px;
 }
 
-.home-nav__link,
-.resume-nav__link,
-.projects-nav__link,
-.about-nav__link {
-  border: none;
-  font-size: 19px;
-  text-align: center;
-  cursor: pointer;
-  height: 100%;
-  width: 25%;
+.response_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.home-nav__link:hover,
-.resume-nav__link:hover,
-.projects-nav__link:hover,
-.about-nav__link:hover {
- background: black;
- color: white;
+.user_input--container {
+  width: 67%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+.command_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+.command_button--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 33%;
+  height: 63vh;
+}
+.command_button {
+  border: none;
+  width: 150px;
+  height: 75px;
+  border-radius: 25px;
+  color: white;
+  background-color: lightblue;
+  box-shadow: 0px 0px 10px grey;
+}
+.chat-box {
+  display: flex;
+  align-items: center;
+  margin-left: 22vw;
+  margin-top: 5vh;
+  padding: 5vh;
+  box-shadow: 2px 0px 32px grey;
+  border-radius: 8px;
+  width: 52%;
+}
+
+.avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.02em; /* Adjust as needed */
+  animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 .landing-background__image {
