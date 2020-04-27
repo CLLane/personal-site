@@ -22,6 +22,8 @@ export class Form extends Component {
     let userRequests = this.searchUserString(userString)
     if (userRequests.length > 1) {
       this.props.setUserResults(userRequests)
+    } else if(userRequests.length === 1) {
+      this.props.setUserResults(userRequests)
     }
     
   }

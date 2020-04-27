@@ -14,7 +14,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: 4,
+      input: 0,
       commands: false,
       landingStatus: "home",
       results: null,
@@ -39,8 +39,12 @@ class App extends Component {
   };
 
   setUserResults = userRequests => {
-    this.setState({ results: userRequests });
-    this.toggleUserPrompt()
+    if(userRequests.length !== 1){
+      this.setState({ results: userRequests });
+      this.toggleUserPrompt()
+    } else {
+      this.setState({landingStatus : userRequests[0]})
+    }
   };
   toggleUserPrompt = () => {
     this.setState({promptStatus: !this.state.promptStatus})
