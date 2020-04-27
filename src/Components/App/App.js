@@ -23,7 +23,7 @@ class App extends Component {
     if (this.state.landingStatus === "home") {
       return (
         <div>
-         <Nav changePage={this.changePage}></Nav>
+          <Nav changePage={this.changePage}></Nav>
           <div className="landing-img__div">
             <img
               className="landing-background__image"
@@ -42,6 +42,24 @@ class App extends Component {
           <Nav changePage={this.changePage}></Nav>
           <div>
             <Resume></Resume>
+          </div>
+        </div>
+      );
+    } else if (this.state.landingStatus === "projects") {
+      return (
+        <div>
+          <Nav changePage={this.changePage}></Nav>
+          <div>
+            <Projects></Projects>
+          </div>
+        </div>
+      );
+    } else if (this.state.landingStatus === "bio") {
+      return (
+        <div>
+          <Nav changePage={this.changePage}></Nav>
+          <div>
+            <Bio></Bio>
           </div>
         </div>
       );
