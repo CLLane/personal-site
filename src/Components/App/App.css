@@ -5,6 +5,11 @@ main {
   display: flex;
   flex-direction: column;
 }
+.up_arrow__svg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
 .submit_button {
   width: 10vw;
   border-radius: 0 10px 10px 0;
@@ -18,15 +23,17 @@ main {
 }
 
 .response_container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+    width: 100%;
 }
 .user_input--container {
-  width: 67%;
-  height: 100px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .command_info {
   display: flex;
@@ -38,12 +45,10 @@ main {
   padding: 5px;
 }
 .command_button--container {
+  width: 100%;
+  height: 30vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 33%;
-  height: 63vh;
+  align-items: flex-end;
 }
 .command_button {
   border: none;
@@ -100,7 +105,7 @@ main {
     border-color: orange;
   }
 }
-
+/* 
 .landing-background__image {
   width: 100%;
   z-index: 0;
@@ -118,4 +123,4 @@ main {
   bottom: 50%;
   color: white;
   font-size: 50px;
-}
+} */

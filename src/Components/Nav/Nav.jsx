@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Nav/Nav.css'
 import { Route, Link } from "react-router-dom";
 
 export let Nav = (props) => {
