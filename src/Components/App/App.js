@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import avatar from "../../Images/avatar.svg";
 import upArrow from "../../Images/up-arrow.svg";
+import { Form } from '../Form/Form'
 import { Bio } from "../Bio/Bio";
 import { Projects } from "../Projects/Projects";
 import { Resume } from "../Resume/Resume";
@@ -71,10 +72,7 @@ class App extends Component {
             </div>
             {this.state.input >= 2 && !this.state.commands && (
               <div className="response_container">
-                <form className="user_input--container">
-                  <input className="user_input" type="text"></input>
-                  <button className="submit_button">Submit</button>
-                </form>
+               <Form></Form>
                 <div className="command_button--container">
                   <button
                     className="command_button"
