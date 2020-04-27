@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import avatar from "../../Images/avatar.svg";
 import upArrow from "../../Images/up-arrow.svg";
-import { Form } from '../Form/Form'
+import { Prompt } from "../Prompt/Prompt"
+import { Form } from "../Form/Form";
 import { Bio } from "../Bio/Bio";
 import { Projects } from "../Projects/Projects";
 import { Resume } from "../Resume/Resume";
@@ -16,7 +17,8 @@ class App extends Component {
       input: 4,
       commands: false,
       landingStatus: "home",
-      response: null
+      results: null,
+      promptStatus: false
     };
   }
   componentDidMount() {
@@ -35,6 +37,14 @@ class App extends Component {
     console.log("place", place);
     this.setState({ landingStatus: place });
   };
+
+  setUserResults = userRequests => {
+    this.setState({ results: userRequests });
+    this.toggleUserPrompt()
+  };
+  toggleUserPrompt = () => {
+    this.setState({promptStatus: !this.state.promptStatus})
+  }
 
   render() {
     if (this.state.landingStatus === "home") {
@@ -62,16 +72,21 @@ class App extends Component {
                   A list of commands is at the bottom left corner of the page.
                 </p>
               )}
-              {this.state.input >= 3 && !this.state.response && (
+              {this.state.input >= 3 && !this.state.results && (
                 <p className="typewriter">
                   Just type your question out in the input below and click
                   enter.
                 </p>
               )}
+              {this.state.promptStatus === true && this.state.results && (
+                <p> Looks like you want to see more than one thing pleas chooose one :
+                  <Prompt results={this.state.results} changePage={this.changePage} ></Prompt>
+                </p>
+              )}
             </div>
             {this.state.input >= 2 && !this.state.commands && (
               <div className="response_container">
-                <Form changePage={this.changePage}></Form>
+                <Form setUserResults={this.setUserResults}></Form>
                 <div className="command_button--container">
                   <button
                     className="command_button"

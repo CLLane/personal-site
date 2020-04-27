@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 export class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       inputValue: '',
-      disabled: true
+      disabled: true,
     }
   }
   async setValue(value) {
@@ -19,7 +19,10 @@ export class Form extends Component {
   handleSubmit (e) {
     e.preventDefault();
     let userString = this.configureInput();
-    this.searchUserString(userString)
+    let userRequests = this.searchUserString(userString)
+    if (userRequests.length > 1) {
+      this.props.setUserResults(userRequests)
+    }
     
   }
 
@@ -46,10 +49,10 @@ export class Form extends Component {
           results.push(el)
         }
     })
-    console.log('results', results)
-    console.log('noSpaces :>> ', noSpaces);
-    console.log('spacesSplit', spacesSplit)
+  return results;
   }
+
+
 
   render() {
     return (
