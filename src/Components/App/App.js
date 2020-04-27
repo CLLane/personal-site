@@ -36,6 +36,15 @@ class App extends Component {
           <Route exact={true} path="/Resume" component={Resume} />
         </div>
       );
+    } else if (this.state.landingStatus === "resume") {
+      return (
+        <div>
+          <Nav changePage={this.changePage}></Nav>
+          <div>
+            <Resume></Resume>
+          </div>
+        </div>
+      );
     }
   }
 }
