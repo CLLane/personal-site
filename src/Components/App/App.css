@@ -23,12 +23,12 @@ main {
 }
 
 .response_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5vh;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vh 0vh 5vh;
+  width: 100%;
 }
 .user_input--container {
   width: 100%;
@@ -36,24 +36,23 @@ main {
   justify-content: center;
 }
 .command_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
+  width: 19%;
+  height: 75%;
   background-color: lightblue;
   border-radius: 10px;
   padding: 5px;
 }
 .command_button--container {
   width: 100%;
-  height: 30vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 40vh;
+  z-index: 99;
 }
 .command_button {
   border: none;
-  width: 150px;
-  height: 75px;
+  width: 100px;
   border-radius: 25px;
   color: white;
   background-color: lightblue;

@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       input: 4,
       commands: false,
-      landingStatus: "home"
+      landingStatus: "home",
+      response: null
     };
   }
   componentDidMount() {
@@ -60,7 +61,8 @@ class App extends Component {
                   A list of commands is at the bottom left corner of the page.
                 </p>
               )}
-              {this.state.input === 3 && (
+              {this.state.input >= 3 && !this.state.response && 
+              (
                 <p className="typewriter">
                   Just type your question out in the input below and click
                   enter.
