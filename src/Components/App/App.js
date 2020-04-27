@@ -62,8 +62,7 @@ class App extends Component {
                   A list of commands is at the bottom left corner of the page.
                 </p>
               )}
-              {this.state.input >= 3 && !this.state.response && 
-              (
+              {this.state.input >= 3 && !this.state.response && (
                 <p className="typewriter">
                   Just type your question out in the input below and click
                   enter.
@@ -72,7 +71,7 @@ class App extends Component {
             </div>
             {this.state.input >= 2 && !this.state.commands && (
               <div className="response_container">
-               <Form></Form>
+                <Form changePage={this.changePage}></Form>
                 <div className="command_button--container">
                   <button
                     className="command_button"
