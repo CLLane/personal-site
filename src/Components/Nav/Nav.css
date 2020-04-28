@@ -1,12 +1,16 @@
 nav {
+ /* height: 100%; */
   overflow: hidden;
   position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 7vh;
+  /* height: 7vh; */
   width: 100%;
   z-index: 100;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .home-nav__link,
@@ -24,7 +28,30 @@ nav {
 .resume-nav__link:hover,
 .projects-nav__link:hover,
 .about-nav__link:hover {
- background: black;
- color: white;
+  background: black;
+  color: white;
 }
 
+.nav_button__false, .nav_button__true{
+  border: none;
+  background: lightblue;
+  border-radius: 40%;
+  width: 3vw;
+}
+.nav_button__false:hover, .nav_button__true:hover {
+  background: skyblue;
+  cursor: pointer;
+}
+
+.nav_button__img {
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.nav_bar__verbose {
+display: flex;
+flex-direction: column-reverse;
+width: 33%;
+height: 50vh;
+}
