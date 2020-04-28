@@ -43,7 +43,7 @@ export class Nav extends Component {
           <div className="nav_bar__verbose">
             <Link
               to="/"
-              onClick={() => this.props.changePage("home")}
+              onClick={(e) => {this.props.changePage("home"); this.toggleShowOptions(e)}}
               className="home-nav__link"
               value=""
               type="button"
@@ -51,27 +51,27 @@ export class Nav extends Component {
               Home
             </Link>
             <Link
-              onClick={() => this.props.changePage("resume")}
+              onClick={(e) => {this.props.changePage("resume"); this.toggleShowOptions(e)}}
               className="resume-nav__link"
               to="/Resume"
             >
               Resume
             </Link>
             <Link
-              onClick={() => this.props.changePage("projects")}
+              onClick={(e) => {this.props.changePage("projects"); this.toggleShowOptions(e)}}
               className="projects-nav__link"
               to="/Projects"
             >
               Projects
             </Link>
             <Link
-              onClick={() => this.props.changePage("bio")}
+              onClick={(e) => {this.props.changePage("bio"); this.toggleShowOptions(e)}}
               className="about-nav__link"
               to="/Bio"
             >
               About
             </Link>
-            <Link to='/Commands' onClick={() => this.props.changePage('commands')} className="commands_nav__link">Commands</Link>
+            <Link to='/Commands' onClick={() => {this.props.changePage('commands'); this.toggleShowOptions()}} className="commands_nav__link">Commands</Link>
             <button
               onClick={e => this.toggleShowOptions(e)}
               className="nav_button__true"

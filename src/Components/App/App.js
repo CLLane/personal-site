@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import avatar from "../../Images/avatar.svg";
 import upArrow from "../../Images/up-arrow.svg";
+import home from '../App/App.js'
 import { Response } from "../Response/Response";
 import { PopUp } from "../PopUp/PopUp";
 import { Prompt } from "../Prompt/Prompt";
@@ -43,11 +44,11 @@ class App extends Component {
       this.setState({ landingStatus: userRequests[0] });
     }
   };
-  // toggleUserPrompt = () => {
-  //   this.setState({promptStatus: !this.state.promptStatus})
-  // }
-
+  toggleUserPrompt = () => {
+    this.setState({ promptStatus: !this.state.promptStatus });
+  };
   render() {
+    console.log('this.state.landingStatus', this.state.landingStatus)
     if (this.state.landingStatus === "home") {
       return (
         <div>
@@ -96,14 +97,13 @@ class App extends Component {
               </div>
             )}
           </main>
+          <Route exact={true} path='/Home' component={home} />
           <Route exact={true} path="/Commands" component={PopUp} />
           <Route exact={true} path="/Bio" component={Bio} />
           <Route exact={true} path="/Projects" component={Projects} />
           <Route exact={true} path="/Resume" component={Resume} />
         </div>
       );
-    } else if (this.state.landingStatus === "commands") {
-      return <PopUp changePage={this.changePage}></PopUp>;
     } else if (this.state.landingStatus === "resume") {
       return (
         <div>
@@ -133,6 +133,7 @@ class App extends Component {
       );
     }
   }
+
 }
 
 export default App;

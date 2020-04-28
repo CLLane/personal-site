@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
-export const PopUp = ({ togglePopUp }) => {
+export const PopUp = ({ changePage }) => {
   return (
-    <div>
+    <div to="/Home" onClick={() => changePage("home")}>
       <h3>Keywords</h3>
       <div>
         <h4>Resume</h4>
