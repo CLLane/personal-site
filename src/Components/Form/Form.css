@@ -2,9 +2,26 @@
   border-radius: 0px 8px 8px 0px;
   width: 10vh;
   text-align: center;
+  background: lightblue;
+  border: lightblue;
+  box-shadow: 0px 0px 10px grey;
+  color:white;
+}
+.submit_button__true {
+  border-radius: 0px 8px 8px 0px;
+  width: 10vh;
+  text-align: center;
+  background: lightgrey;
+  border: lightgrey;
+  box-shadow: 3.5px 0px 10px grey;
+  color:white;
+}
+.submit_button:hover {
+  background: lightskyblue;
 }
 .user_input {
-  /* border: 2px solid grey; */
+  box-shadow: 0px 0px 10px grey;
+  border: none;
   width: 30vw;
   height: 5vh;
   border-right: none;

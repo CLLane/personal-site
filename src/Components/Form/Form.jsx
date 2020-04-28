@@ -57,11 +57,37 @@ export class Form extends Component {
 
 
   render() {
-    return (
-      <form className="user_input--container">
-        <input onChange={e => this.setValue(e.target.value)} className="user_input" type="text"></input>
-        <input onClick={e => this.handleSubmit(e) } disabled={this.state.disabled} className="submit_button" placeholder='Submit'></input>
-      </form>
-    );
+    if (this.state.disabled) {
+      return (
+        <form className="user_input--container">
+          <input
+            onChange={e => this.setValue(e.target.value)}
+            className="user_input"
+            type="text"
+          ></input>
+          <input
+            onClick={e => this.handleSubmit(e)}
+            className="submit_button__true"
+            value='Submit'
+            type="button"
+          ></input>
+        </form>
+      );
+    } else {
+      return (
+       <form className="user_input--container">
+         <input
+           onChange={e => this.setValue(e.target.value)}
+           className="user_input"
+           type="text"
+         ></input>
+         <input
+           onClick={e => this.handleSubmit(e)}
+           className="submit_button"
+           value='Submit'
+           type="button"
+         ></input>
+       </form>)  
+  }
   }
 }
