@@ -24,13 +24,13 @@ export class Nav extends Component {
               onClick={e => this.toggleShowOptions(e)}
               className="nav_button__false"
             >
-              <button
-                onClick={() => this.props.changePage("home")}
-                className="home_nav__false"
-              >
-                <img className="nav_home__img" src={home}></img>
-              </button>
               <img className="nav_button__img" src={dropDown}></img>
+            </button>
+            <button
+              onClick={() => this.props.changePage("home")}
+              className="home_nav__false"
+            >
+              <img className="nav_home__img" src={home}></img>
             </button>
           </div>
         )}
