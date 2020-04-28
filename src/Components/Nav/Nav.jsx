@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {InfoItem} from '../InfoItem/InfoItem'
 import "../Nav/Nav.css";
 import dropDown from "../../Images/drop-down.svg";
 import home from "../../Images/home.svg";
@@ -43,58 +44,10 @@ export class Nav extends Component {
           <button onClick={e => this.props.changePage("bio")}>Bio</button>
           {this.state.showOptions && (
             <div className="nav_bar__verbose">
-              <Link
-                to="/"
-                onClick={e => {
-                  this.props.changePage("home");
-                  this.toggleShowOptions(e);
-                }}
-                className="home-nav__link"
-                value=""
-                type="button"
-              >
-                Home
-              </Link>
-              <Link
-                onClick={e => {
-                  this.props.changePage("resume");
-                  this.toggleShowOptions(e);
-                }}
-                className="resume-nav__link"
-                to="/Resume"
-              >
-                Resume
-              </Link>
-              <Link
-                onClick={e => {
-                  this.props.changePage("projects");
-                  this.toggleShowOptions(e);
-                }}
-                className="projects-nav__link"
-                to="/Projects"
-              >
-                Projects
-              </Link>
-              <Link
-                onClick={e => {
-                  this.props.changePage("bio");
-                  this.toggleShowOptions(e);
-                }}
-                className="about-nav__link"
-                to="/Bio"
-              >
-                About
-              </Link>
-              <Link
-                to="/Commands"
-                onClick={() => {
-                  this.props.changePage("commands");
-                  this.toggleShowOptions();
-                }}
-                className="commands_nav__link"
-              >
-                Commands
-              </Link>
+              <h3>Icons</h3>
+              <div className="info_item__container">
+                <InfoItem ></InfoItem>
+              </div>
             </div>
           )}
         </div>
