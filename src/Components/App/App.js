@@ -14,7 +14,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: 0,
+      input: 3,
       commands: false,
       landingStatus: "home",
       results: null,
@@ -83,14 +83,32 @@ class App extends Component {
                 </p>
               )}
               {this.state.promptStatus === true && this.state.results && (
-                <p> Looks like you want to see more than one thing pleas chooose one :
-                  <Prompt results={this.state.results} changePage={this.changePage} ></Prompt>
+                <p>
+                  {" "}
+                  Looks like you want to see more than one thing pleas chooose
+                  one :
+                  <Prompt
+                    results={this.state.results}
+                    changePage={this.changePage}
+                  ></Prompt>
                 </p>
               )}
             </div>
-            {this.state.input >= 2 && !this.state.commands && (
+            {this.state.input === 2 && !this.state.commands && (
               <div className="response_container">
-                <Form setUserResults={this.setUserResults}></Form>
+                <div className="command_button--container">
+                  <button
+                    className="command_button"
+                    onClick={this.toggleCommands}
+                  >
+                    Commands
+                  </button>
+                </div>
+              </div>
+            )}
+            {this.state.input >= 3 && (
+              <div className="response_container">
+              <Form setUserResults={this.setUserResults}></Form>
                 <div className="command_button--container">
                   <button
                     className="command_button"
@@ -106,7 +124,7 @@ class App extends Component {
                 <div className="response_container">
                   <form className="user_input--container">
                     <input className="user_input" type="text"></input>
-                    <button className="submit_button">Submit</button>
+                    {/* <button className="submit_button">Submit</button> */}
                   </form>
                   <div className="command_button--container">
                     <article className="command_info">

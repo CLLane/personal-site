@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../Form/Form.css'
 export class Form extends Component {
   constructor(props) {
     super(props);
@@ -60,7 +60,7 @@ export class Form extends Component {
     return (
       <form className="user_input--container">
         <input onChange={e => this.setValue(e.target.value)} className="user_input" type="text"></input>
-        <button onClick={e => this.handleSubmit(e) } disabled={this.state.disabled} className="submit_button">Submit</button>
+        <input onClick={e => this.handleSubmit(e) } disabled={this.state.disabled} className="submit_button" placeholder='Submit'></input>
       </form>
     );
   }
