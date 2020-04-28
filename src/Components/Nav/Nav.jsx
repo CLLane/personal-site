@@ -9,7 +9,7 @@ export class Nav extends Component {
     super(props);
     this.state = {
       showOptions: false,
-      popUpStatus: ''
+      popUpStatus: ""
     };
   }
   toggleShowOptions = e => {
@@ -18,70 +18,86 @@ export class Nav extends Component {
   };
   togglePopUp = e => {
     e.preventDefault();
-    this.setState({ popUpStatus: e.target.value})
-  }
+    this.setState({ popUpStatus: e.target.value });
+  };
   render() {
     return (
       <nav>
-        {!this.state.showOptions && (
-          <div>
-            <button
-              onClick={e => this.toggleShowOptions(e)}
-              className="nav_button__false"
-            >
-              <img className="nav_button__img" src={dropDown}></img>
-            </button>
-            <button
-              onClick={() => this.props.changePage("home")}
-              className="home_nav__false"
-            >
-              <img className="nav_home__img" src={home}></img>
-            </button>
-          </div>
-        )}
-        {this.state.showOptions && (
-          <div className="nav_bar__verbose">
-            <Link
-              to="/"
-              onClick={(e) => {this.props.changePage("home"); this.toggleShowOptions(e)}}
-              className="home-nav__link"
-              value=""
-              type="button"
-            >
-              Home
-            </Link>
-            <Link
-              onClick={(e) => {this.props.changePage("resume"); this.toggleShowOptions(e)}}
-              className="resume-nav__link"
-              to="/Resume"
-            >
-              Resume
-            </Link>
-            <Link
-              onClick={(e) => {this.props.changePage("projects"); this.toggleShowOptions(e)}}
-              className="projects-nav__link"
-              to="/Projects"
-            >
-              Projects
-            </Link>
-            <Link
-              onClick={(e) => {this.props.changePage("bio"); this.toggleShowOptions(e)}}
-              className="about-nav__link"
-              to="/Bio"
-            >
-              About
-            </Link>
-            <Link to='/Commands' onClick={() => {this.props.changePage('commands'); this.toggleShowOptions()}} className="commands_nav__link">Commands</Link>
-            <button
-              onClick={e => this.toggleShowOptions(e)}
-              className="nav_button__true"
-              // value="Nav"
-              // type="button"
-            >
-              <img className="nav_button__img" src={dropDown}></img>
-            </button>
-          </div>
-        )}
+        <div>
+          <button
+            onClick={e => this.toggleShowOptions(e)}
+            className="nav_button__false"
+          >
+            <img className="nav_button__img" src={dropDown}></img>
+          </button>
+          <button
+            onClick={() => this.props.changePage("home")}
+            className="home_nav__false"
+          >
+            <img className="nav_home__img" src={home}></img>
+          </button>
+          <button onClick={e => this.props.changePage("resume")}>Resume</button>
+          <button onClick={e => this.props.changePage("projects")}>
+            Projects
+          </button>
+          <button onClick={e => this.props.changePage("bio")}>Bio</button>
+          {this.state.showOptions && (
+            <div className="nav_bar__verbose">
+              <Link
+                to="/"
+                onClick={e => {
+                  this.props.changePage("home");
+                  this.toggleShowOptions(e);
+                }}
+                className="home-nav__link"
+                value=""
+                type="button"
+              >
+                Home
+              </Link>
+              <Link
+                onClick={e => {
+                  this.props.changePage("resume");
+                  this.toggleShowOptions(e);
+                }}
+                className="resume-nav__link"
+                to="/Resume"
+              >
+                Resume
+              </Link>
+              <Link
+                onClick={e => {
+                  this.props.changePage("projects");
+                  this.toggleShowOptions(e);
+                }}
+                className="projects-nav__link"
+                to="/Projects"
+              >
+                Projects
+              </Link>
+              <Link
+                onClick={e => {
+                  this.props.changePage("bio");
+                  this.toggleShowOptions(e);
+                }}
+                className="about-nav__link"
+                to="/Bio"
+              >
+                About
+              </Link>
+              <Link
+                to="/Commands"
+                onClick={() => {
+                  this.props.changePage("commands");
+                  this.toggleShowOptions();
+                }}
+                className="commands_nav__link"
+              >
+                Commands
+              </Link>
+            </div>
+          )}
+        </div>
       </nav>
     );
   }
