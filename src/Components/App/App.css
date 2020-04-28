@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 p {
   font-size: 20px;
 }
@@ -65,7 +69,7 @@ main {
 }
 
 
-/* 
+
 .landing-background__image {
   width: 100%;
   z-index: 0;
@@ -83,4 +87,4 @@ main {
   bottom: 50%;
   color: white;
   font-size: 50px;
-} */
+}

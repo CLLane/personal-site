@@ -28,46 +28,20 @@ export class Nav extends Component {
   render() {
     return (
       <nav>
-        <div>
-          <button
-            onClick={e => this.toggleShowOptions(e)}
+           <button
+            onMouseEnter={e => this.toggleShowOptions(e)}
             className="nav_button__false"
-          >
+            >
             <img className="nav_button__img" src={dropDown}></img>
           </button>
-          <button
-            onClick={() => this.props.changePage("home")}
-            className="home_nav__false"
-          >
-            <img className="nav_button__img" src={home}></img>
-          </button>
-          <button
-            onClick={e => this.props.changePage("resume")}
-            className="home_nav__false"
-          >
-            <img className="nav_button__img" src={resume}></img>
-          </button>
-          <button
-            onClick={e => this.props.changePage("projects")}
-            className="home_nav__false"
-          >
-            <img className="nav_button__img" src={projects}></img>
-          </button>
-          <button
-            onClick={e => this.props.changePage("bio")}
-            className="home_nav__false"
-          >
-            <img className="nav_button__img" src={bio}></img>
-          </button>
           {this.state.showOptions && (
-            <div className="nav_bar__verbose">
-              <h3>Icons</h3>
+            <div className="nav_bar__verbose"
+            onMouseLeave={e => this.toggleShowOptions(e)}>
               <div className="info_item__container">
-                <InfoItem></InfoItem>
+                <InfoItem changePage={this.props.changePage}></InfoItem>
               </div>
             </div>
           )}
-        </div>
       </nav>
     );
   }

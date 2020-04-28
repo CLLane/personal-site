@@ -1,0 +1,40 @@
+.info_item__home,
+.info_item__resume,
+.info_item__projects,
+.info_item__bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100% 100% 100% 100%;
+  background: lightblue;
+  width: 6vw;
+  height: 11vh;
+  position: absolute;
+}
+
+.info_item__home {
+position: absolute;
+ margin-left: -3em;
+  margin-top: 2em;
+  
+} 
+.info_item__bio {
+position: absolute;
+ margin-left: 2em;
+ margin-top: 4.5em;
+}
+.info_item__projects{
+position: absolute;
+ margin-left: 6em;
+ margin-top: 8.5em;
+} 
+
+.info_item__resume {
+  position: absolute;
+ margin-left: 9em;
+ margin-top: 13.5em;
+}
+
+.nav_tag {
+  font-size: small;
+}
