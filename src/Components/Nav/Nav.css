@@ -16,7 +16,8 @@ nav {
 .home-nav__link,
 .resume-nav__link,
 .projects-nav__link,
-.about-nav__link {
+.about-nav__link,
+.commands_nav__link {
   border: none;
   font-size: 19px;
   text-align: center;
@@ -27,7 +28,8 @@ nav {
 .home-nav__link:hover,
 .resume-nav__link:hover,
 .projects-nav__link:hover,
-.about-nav__link:hover {
+.about-nav__link:hover,
+.commands_nav__link:hover {
   background: black;
   color: white;
 }
@@ -58,7 +60,8 @@ nav {
 .nav_bar__verbose {
   display: flex;
   flex-direction: column-reverse;
-  width: 33%;
+  justify-content: space-evenly;
+  width: 20%;
   height: 50vh;
 }
 

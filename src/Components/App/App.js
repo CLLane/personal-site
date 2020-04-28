@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import avatar from "../../Images/avatar.svg";
 import upArrow from "../../Images/up-arrow.svg";
-import { Prompt } from "../Prompt/Prompt"
+import { Response } from "../Response/Response";
+import { PopUp } from "../PopUp/PopUp";
+import { Prompt } from "../Prompt/Prompt";
 import { Form } from "../Form/Form";
 import { Bio } from "../Bio/Bio";
 import { Projects } from "../Projects/Projects";
@@ -14,11 +16,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: 3,
-      commands: false,
+      input: 0,
       landingStatus: "home",
-      results: null,
-      promptStatus: false
+      results: null
     };
   }
   componentDidMount() {
@@ -29,9 +29,6 @@ class App extends Component {
       this.setState({ input: this.state.input + 1 });
     }
   };
-  toggleCommands = () => {
-    this.setState({ commands: !this.state.commands });
-  };
 
   changePage = place => {
     console.log("place", place);
@@ -39,16 +36,16 @@ class App extends Component {
   };
 
   setUserResults = userRequests => {
-    if(userRequests.length !== 1){
+    if (userRequests.length !== 1) {
       this.setState({ results: userRequests });
-      this.toggleUserPrompt()
+      this.toggleUserPrompt();
     } else {
-      this.setState({landingStatus : userRequests[0]})
+      this.setState({ landingStatus: userRequests[0] });
     }
   };
-  toggleUserPrompt = () => {
-    this.setState({promptStatus: !this.state.promptStatus})
-  }
+  // toggleUserPrompt = () => {
+  //   this.setState({promptStatus: !this.state.promptStatus})
+  // }
 
   render() {
     if (this.state.landingStatus === "home") {
@@ -58,34 +55,33 @@ class App extends Component {
           <main>
             <div className="chat-box">
               <img className="avatar" src={avatar}></img>
-
-              {this.state.input === 0 && (
-                <p className="typewriter">
-                  Hi, I'm Chris. Welcome to my site. Click Enter to continue.
-                </p>
+              {this.state.input == 0 && (
+                <Response
+                  input={this.state.input}
+                  results={this.state.results}
+                ></Response>
               )}
-              {this.state.input === 1 && (
-                <p className="typewriter">
-                  Ask me anything or use the nav bar up there{" "}
-                  <img className="up_arrow__svg" src={upArrow}></img> to get
-                  around.
-                </p>
+              {this.state.input == 1 && (
+                <Response
+                  input={this.state.input}
+                  results={this.state.results}
+                ></Response>
               )}
-              {this.state.input === 2 && (
-                <p className="typewriter">
-                  A list of commands is at the bottom left corner of the page.
-                </p>
+              {this.state.input == 2 && (
+                <Response
+                  input={this.state.input}
+                  results={this.state.results}
+                ></Response>
               )}
-              {this.state.input >= 3 && !this.state.results && (
-                <p className="typewriter">
-                  Just type your question out in the input below and click
-                  enter.
-                </p>
+              {this.state.input >= 3 && (
+                <Response
+                  input={this.state.input}
+                  results={this.state.results}
+                ></Response>
               )}
               {this.state.promptStatus === true && this.state.results && (
                 <p>
-                  {" "}
-                  Looks like you want to see more than one thing pleas chooose
+                  Looks like you want to see more than one thing please chooose
                   one :
                   <Prompt
                     results={this.state.results}
@@ -94,61 +90,20 @@ class App extends Component {
                 </p>
               )}
             </div>
-            {this.state.input === 2 && !this.state.commands && (
-              <div className="response_container">
-                <div className="command_button--container">
-                  <button
-                    className="command_button"
-                    onClick={this.toggleCommands}
-                  >
-                    Commands
-                  </button>
-                </div>
-              </div>
-            )}
             {this.state.input >= 3 && (
               <div className="response_container">
-              <Form setUserResults={this.setUserResults}></Form>
-                <div className="command_button--container">
-                  <button
-                    className="command_button"
-                    onClick={this.toggleCommands}
-                  >
-                    Commands
-                  </button>
-                </div>
+                <Form setUserResults={this.setUserResults}></Form>
               </div>
             )}
-            {this.state.commands && (
-              <>
-                <div className="response_container">
-                  <form className="user_input--container">
-                    <input className="user_input" type="text"></input>
-                    {/* <button className="submit_button">Submit</button> */}
-                  </form>
-                  <div className="command_button--container">
-                    <article className="command_info">
-                      <h2>Include one of these key words in your question:</h2>
-                      <p>Resume</p>
-                      <p>Bio</p>
-                      <p>Portfolio</p>
-                    </article>
-                  </div>
-                </div>
-                <button
-                  className="command_button"
-                  onClick={this.toggleCommands}
-                >
-                  Commands
-                </button>
-              </>
-            )}
           </main>
+          <Route exact={true} path="/Commands" component={PopUp} />
           <Route exact={true} path="/Bio" component={Bio} />
           <Route exact={true} path="/Projects" component={Projects} />
           <Route exact={true} path="/Resume" component={Resume} />
         </div>
       );
+    } else if (this.state.landingStatus === "commands") {
+      return <PopUp changePage={this.changePage}></PopUp>;
     } else if (this.state.landingStatus === "resume") {
       return (
         <div>

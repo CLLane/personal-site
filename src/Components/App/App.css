@@ -24,29 +24,29 @@ main {
   display: flex;
   justify-content: center;
 }
-.command_info {
+/* .command_info {
   width: 19%;
   height: 75%;
   background-color: lightblue;
   border-radius: 10px;
   padding: 5px;
-}
-.command_button--container {
+} */
+/* .command_button--container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 40vh;
   z-index: 99;
-}
-.command_button {
+} */
+/* .command_button {
   border: none;
   width: 100px;
   border-radius: 25px;
   color: white;
   background-color: lightblue;
   box-shadow: 0px 0px 10px grey;
-}
+} */
 .chat-box {
   display: flex;
   align-items: center;
@@ -64,35 +64,7 @@ main {
   border-radius: 8px;
 }
 
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.02em; /* Adjust as needed */
-  animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
 /* 
 .landing-background__image {
   width: 100%;

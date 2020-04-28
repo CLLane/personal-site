@@ -8,13 +8,18 @@ export class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOptions: false
+      showOptions: false,
+      popUpStatus: ''
     };
   }
   toggleShowOptions = e => {
     e.preventDefault();
     this.setState({ showOptions: !this.state.showOptions });
   };
+  togglePopUp = e => {
+    e.preventDefault();
+    this.setState({ popUpStatus: e.target.value})
+  }
   render() {
     return (
       <nav>
@@ -66,6 +71,7 @@ export class Nav extends Component {
             >
               About
             </Link>
+            <Link to='/Commands' onClick={() => this.props.changePage('commands')} className="commands_nav__link">Commands</Link>
             <button
               onClick={e => this.toggleShowOptions(e)}
               className="nav_button__true"
