@@ -1,0 +1,30 @@
+nav {
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 7vh;
+  width: 100%;
+  z-index: 100;
+}
+
+.home-nav__link,
+.resume-nav__link,
+.projects-nav__link,
+.about-nav__link {
+  border: none;
+  font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  width: 25%;
+}
+.home-nav__link:hover,
+.resume-nav__link:hover,
+.projects-nav__link:hover,
+.about-nav__link:hover {
+ background: black;
+ color: white;
+}
+
