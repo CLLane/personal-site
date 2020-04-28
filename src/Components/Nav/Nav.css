@@ -1,18 +1,23 @@
 nav {
+  /* height: 100%; */
   overflow: hidden;
   position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 7vh;
+  /* height: 7vh; */
   width: 100%;
   z-index: 100;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .home-nav__link,
 .resume-nav__link,
 .projects-nav__link,
-.about-nav__link {
+.about-nav__link,
+.commands_nav__link {
   border: none;
   font-size: 19px;
   text-align: center;
@@ -23,8 +28,54 @@ nav {
 .home-nav__link:hover,
 .resume-nav__link:hover,
 .projects-nav__link:hover,
-.about-nav__link:hover {
- background: black;
- color: white;
+.about-nav__link:hover,
+.commands_nav__link:hover {
+  background: black;
+  color: white;
 }
 
+.nav_button__false,
+.nav_button__true,
+.home_nav__false {
+  border: none;
+  background: lightblue;
+  border-radius: 40%;
+  width: 3vw;
+  margin: 5px;
+}
+.nav_button__false:hover,
+.nav_button__true:hover,
+.home_nav__false:hover {
+  background: skyblue;
+  cursor: pointer;
+}
+
+.nav_button__img,
+.nav_home__img {
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.nav_bar__verbose {
+  display: flex;
+  flex-direction: column;
+ 
+  width: 43%;
+  height: 50vh;
+}
+
+.info_item__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
