@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../Nav/Nav.css";
-import dropDown from '../../Images/drop-down.svg'
+import dropDown from '../../Images/drop-down.svg';
+import home from '../../Images/home.svg'
 import { Route, Link } from "react-router-dom";
 
 export class Nav extends Component {
@@ -18,7 +19,7 @@ export class Nav extends Component {
     return (
       <nav>
         {!this.state.showOptions && (
-          <>
+          <div>
             <button
               onClick={e => this.toggleShowOptions(e)}
               className="nav_button__false"
@@ -27,10 +28,16 @@ export class Nav extends Component {
             >
               <img className="nav_button__img" src={dropDown}></img>
             </button>
-          </>
+            <button
+              onClick={() => this.props.changePage("home")}
+              className="home_nav__false"
+            >
+            <img className='nav_home__img' src={home}></img>
+            </button>
+          </div>
         )}
         {this.state.showOptions && (
-          <div className='nav_bar__verbose'>
+          <div className="nav_bar__verbose">
             <Link
               to="/"
               onClick={() => this.props.changePage("home")}
