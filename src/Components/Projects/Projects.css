@@ -1,5 +1,11 @@
 .project-container__div {
   display: flex;
+}
+.project-image {
+  width: 35vw;
+}
+
+.project {
+  display: flex;
   flex-direction: column;
-  align-items: center;
 }

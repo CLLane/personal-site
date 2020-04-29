@@ -20,21 +20,21 @@ export const Bio = () => {
     {
       img: artist,
       p:
-        "While pursuing cooking as a career, I had a couple of shows where I hung some paintings and sketches"
+        "While pursuing cooking as a career, I had a couple of shows where I hung some paintings and sketches."
     },
     {
       img: running,
       p:
-        "A resturaunt can be a stressful place so I ran almost every morning to clear my head"
+        "A resturaunt can be a stressful place so I ran almost every morning to clear my head."
     },
     {
       img: climbing,
-      p: "And when I could get some time away I would escape to go climb"
+      p: "And when I could get some time away I would escape to go climb."
     },
     {
       img: developer,
       p:
-        "I decided that I wanted a new challenge and switched careers to become a software developer"
+        "I decided that I wanted a new challenge and switched careers to become a software developer."
     }
   ];
 
@@ -47,14 +47,14 @@ export const Bio = () => {
           </div>
           <div className="bio_container__div">
             <img className="bio_svg" src={obj.img}></img>
-            <p>{obj.p}</p>
+            <p className='bio_p'>{obj.p}</p>
           </div>
         </>
       );
     } else if (index % 2 === 0) {
       return (
         <div className="bio_container__div">
-          <p>{obj.p}</p>
+          <p className='bio_p'>{obj.p}</p>
           <img className="bio_svg" src={obj.img}></img>
         </div>
       );
@@ -62,7 +62,7 @@ export const Bio = () => {
       return (
         <div className="bio_container__div">
           <img className="bio_svg" src={obj.img}></img>
-          <p>{obj.p}</p>
+          <p className='bio_p'>{obj.p}</p>
         </div>
       );
     }
