@@ -69,13 +69,13 @@ class App extends Component {
               </div>
             </div>
             <div className="component_divider__div">
+              <Bio></Bio>
+            </div>
+            <div className="component_divider__div">
               <Resume></Resume>
             </div>
             <div className="component_divider__div">
               <Projects></Projects>
-            </div>
-            <div className="component_divider__div">
-              <Bio></Bio>
             </div>
 
             {/* <div className="chat-box">
