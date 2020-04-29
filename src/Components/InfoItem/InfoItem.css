@@ -6,10 +6,14 @@
   flex-direction: column;
   align-items: center;
   border-radius: 100% 100% 100% 100%;
-  background: lightblue;
+  background: none;
   width: 6vw;
   height: 11vh;
   position: absolute;
+}
+.info_item__bio:hover, .info_item__home:hover, .info_item__projects:hover, .info_item__resume:hover {
+  cursor: pointer;
+  border: 5px solid skyblue;
 }
 
 .info_item__home {
