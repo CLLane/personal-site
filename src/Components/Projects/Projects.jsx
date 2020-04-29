@@ -8,10 +8,11 @@ export const Projects = () => {
     <div className="project">
       <img
         className="project_title"
-        src="https://fontmeme.com/permalink/200429/c87e606bc98bde2adca2d9a847f7f698.png"
+        src="https://fontmeme.com/permalink/200429/c574a4eaf640af3ddcbfa52c8fc21a8d.png"
         alt="wander-over-yonder-font"
         border="0"
       ></img>
+
       <h2 className="project_title">Color Picker</h2>
       <div className="project-container__div">
         <img
@@ -54,7 +55,7 @@ export const Projects = () => {
           palettes.
         </p>
       </div>
-      <h2 className="project_title">Color Picker</h2>
+      <h2 className="project_title">Launch Log</h2>
       <div className="project-container__div">
         <img
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/Home.png?itok=988q-cEX"

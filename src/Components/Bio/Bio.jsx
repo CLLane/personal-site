@@ -10,40 +10,31 @@ import running from "../../Images/running.svg";
 
 export const Bio = () => {
   let bioObjects = [
-    {
-      img: university,
-      p:
-        "https://fontmeme.com/permalink/200429/028713d6ca1b2ad9dd3bf3e305168c0c.png"
-    },
+    { img: university, p: "I went to school at Florida State University." },
     {
       img: chemist,
       p:
-        "https://fontmeme.com/permalink/200429/dd3f90aaea92883bcb01ff1511898c9c.png"
+        "Where I studied Biochemistry, but decided that I didn't want to make soap for a living."
     },
-    {
-      img: chef,
-      p:
-        "https://fontmeme.com/permalink/200429/dba0b2fb2f4d910e07ad9baa83f14731.png"
-    },
+    { img: chef, p: "So I decided to follow a passion and become a chef." },
     {
       img: artist,
       p:
-        "https://fontmeme.com/permalink/200429/f95a34c75d791b9a417a07974cdafe1c.png"
+        "While pursuing cooking as a career, I had a couple of shows where I hung some paintings and sketches."
     },
     {
       img: running,
       p:
-        "https://fontmeme.com/permalink/200429/8701f376173811f3e170318fa0d4b432.png"
+        "A resturaunt can be a stressful place so I ran almost every morning to clear my head."
     },
     {
       img: climbing,
-      p:
-        "https://fontmeme.com/permalink/200429/8f4c3a4ad010b7f2ab42c17159671a6e.png"
+      p: "And when I could get some time away I would escape to go climb."
     },
     {
       img: developer,
       p:
-        "https://fontmeme.com/permalink/200429/dd0f59fce3089ffb3c91382ce64eae3a.png"
+        "I decided that I wanted a new challenge and switched careers to become a software developer."
     }
   ];
 
@@ -52,22 +43,22 @@ export const Bio = () => {
       return (
         <>
           <div className="bio_container__div">
-            <img src="https://fontmeme.com/permalink/200429/1567c8c48f228d0b19ec315ff9fdd58b.png"></img>
+            <img
+              src="https://fontmeme.com/permalink/200429/16eab6cf610e2ad3fb03ae21ec61d854.png"
+              alt="andalusya-font"
+              border="0"
+            ></img>
           </div>
           <div className="bio_container__div">
             <img className="bio_svg" src={obj.img}></img>
-            <img
-              src={obj.p}
-              alt="wander-over-yonder-font"
-              border="0"
-            ></img>
+            <p className="bio_p">{obj.p}</p>
           </div>
         </>
       );
     } else if (index % 2 === 0) {
       return (
         <div className="bio_container__div">
-          <img src={obj.p} alt="wander-over-yonder-font" border="0"></img>
+          <p className='bio_p'>{obj.p}</p>
           <img className="bio_svg" src={obj.img}></img>
         </div>
       );
@@ -75,7 +66,7 @@ export const Bio = () => {
       return (
         <div className="bio_container__div">
           <img className="bio_svg" src={obj.img}></img>
-          <img src={obj.p} alt="wander-over-yonder-font" border="0"></img>
+          <p className='bio_p'>{obj.p}</p>
         </div>
       );
     }

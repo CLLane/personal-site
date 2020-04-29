@@ -16,6 +16,9 @@
 .project_title {
   align-self: center;
   margin: 5vh;
+  text-decoration: underline;
+  font-size: xx-large;
+  font-weight: 900;
 }
 .project_tech__container {
   display: flex;
