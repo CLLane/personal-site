@@ -6,7 +6,12 @@ import "./Projects.css";
 export const Projects = () => {
   return (
     <div className="project">
-      <h1 className="project_title">PROJECTS</h1>
+      <img
+        className="project_title"
+        src="https://fontmeme.com/permalink/200429/c87e606bc98bde2adca2d9a847f7f698.png"
+        alt="wander-over-yonder-font"
+        border="0"
+      ></img>
       <h2 className="project_title">Color Picker</h2>
       <div className="project-container__div">
         <img
