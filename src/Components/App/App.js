@@ -72,10 +72,10 @@ class App extends Component {
               <Bio></Bio>
             </div>
             <div className="component_divider__div">
-              <Resume></Resume>
+              <Projects></Projects>
             </div>
             <div className="component_divider__div">
-              <Projects></Projects>
+              <Resume></Resume>
             </div>
 
             

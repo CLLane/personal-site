@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: lighblue;
 }
 
 p {
@@ -73,5 +74,5 @@ main {
   justify-items: center;
   width: 100%;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 }
