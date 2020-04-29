@@ -14,25 +14,25 @@
 
 .info_item__home {
 position: absolute;
- margin-left: -3em;
-  margin-top: 2em;
+ margin-left: -11vh;
+  margin-top: 10vh;
   
 } 
 .info_item__bio {
 position: absolute;
- margin-left: 2em;
- margin-top: 4.5em;
+ margin-left: -.5vh;
+ margin-top: 14vh;
 }
 .info_item__projects{
 position: absolute;
- margin-left: 6em;
- margin-top: 8.5em;
+ margin-left: 9.75vh;
+ margin-top: 19vh;
 } 
 
 .info_item__resume {
   position: absolute;
- margin-left: 9em;
- margin-top: 13.5em;
+ margin-left: 18vh;
+ margin-top: 27vh;
 }
 
 .nav_tag {
