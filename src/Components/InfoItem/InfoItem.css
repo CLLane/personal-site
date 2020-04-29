@@ -13,7 +13,8 @@
 }
 .info_item__bio:hover, .info_item__home:hover, .info_item__projects:hover, .info_item__resume:hover {
   cursor: pointer;
-  border: 5px solid skyblue;
+  border: 3px solid rgb(135, 206, 235, .8);
+  background: rgb(135, 206, 235, .6)
 }
 /* 
 .info_item__home {
