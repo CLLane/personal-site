@@ -1,6 +1,11 @@
-.p_bio {
-  padding: 10em;
-  font-size: 25px;
-  font-weight: 800;
-  line-height: 2;
+.bio_svg {
+  width: 15vw;
+  margin: 5vh;
+  border-radius: 100%;
+}
+.bio_container__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
