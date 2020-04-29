@@ -1,46 +1,87 @@
 import React from "react";
+import github from "../../Images/github.svg";
+import api from "../../Images/api.svg";
 import "./Projects.css";
 
 export const Projects = () => {
   return (
-    <div className='project'>
-      <h1>PROJECTS</h1>
-      <h2>Color Picker</h2>
+    <div className="project">
+      <h1 className="project_title">PROJECTS</h1>
+      <h2 className="project_title">Color Picker</h2>
       <div className="project-container__div">
         <img
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF"
           className="project-image"
         ></img>
-        <h3>TechStack</h3>
-        <ul>
-          <li>React</li>
-          <li>React Router</li>
-          <li>React Hooks</li>
-          <li>Jest</li>
-          <li>Enzyme</li>
-        </ul>
+        <div className="projects_secondRow">
+          <div className="project_tech__container">
+            <h3>TechStack</h3>
+            <ul>
+              <li>React</li>
+              <li>React Router</li>
+              <li>React Hooks</li>
+              <li>Jest</li>
+              <li>Enzyme</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+          <div className="project_link__container">
+            <a href="https://github.com/CLLane/color-picker-ui" target="_blank">
+              <img className="link_icon" src={github}></img>
+              FrontEnd
+            </a>
+            <a
+              href="https://github.com/djavanm/color-picker-api"
+              target="_blank"
+            >
+              <img className="link_icon" src={github}></img>
+              BackEnd
+            </a>
+          </div>
         </div>
-        <div className="stack-container__div">
-          <p>
-            A random hex-code generator that allows a user to create projects
-            and save palettes to projects. The app allows user to login or
-            create a new account. Once logged in the user will be able to
-            generate random hexcodes and in the event they find one they like
-            there is an option to save a palette. If the user chooses to save a
-            palette they must first create a project and once a project is
-            created the palette will be saved, this can happen simultaneously. A
-            user can create as many palettes as they would like and assign them
-            to new or existing projects. The users projects and palettes. The
-            user can utilze a button to logout, see all palettes, and lock
-            hex-codes they like.
-          </p>
       </div>
+      <div className="project_p">
+        <p>
+          A random hex-code generator that allows a user to create projects and
+          save palettes to projects. The app allows user to login or create a
+          new account. The backend to this app was created using node.js and is
+          set up to allow a user to register, create, delete, and edit color
+          palettes.
+        </p>
+      </div>
+      <h2 className="project_title">Color Picker</h2>
       <div className="project-container__div">
-        <h2>Color Picker</h2>
         <img
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/Home.png?itok=988q-cEX"
           className="project-image"
         ></img>
+        <div className="projects_secondRow">
+          <div className="project_tech__container">
+            <h3>TechStack</h3>
+            <ul>
+              <li>React</li>
+              <li>React Router</li>
+              <li>Redux</li>
+              <li>Jest</li>
+              <li>Enzyme</li>
+            </ul>
+          </div>
+          <div className="project_link__container">
+            <a href="https://github.com/CLLane/space-launch" target="_blank">
+              <img className="link_icon" src={github}></img>
+              FrontEnd
+            </a>
+            <a
+              href="hhttps://launchlibrary.net/docs/1.4.1/api.html"
+              target="_blank"
+            >
+              <img className="link_icon" src={api}></img>
+              API
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="project_p">
         <p>
           Launch Log, was built over the course of six days utilizing an agile
           workflow, and allows users to search the Launch Library API for
@@ -53,21 +94,7 @@ export const Projects = () => {
           simulation, async fetch calls, React state changes, and Redux store
           updates.
         </p>
-        <div className="stack-container__div">
-          <h3>TechStack</h3>
-          <ul>
-            <li>React</li>
-            <li>React Router</li>
-            <li>Redux</li>
-            <li>Jest</li>
-            <li>Enzyme</li>
-          </ul>
-        </div>
       </div>
-      <h3>
-        Checkout out my other Projects on{" "}
-        <a href="https://github.com/CLLane">Github</a>{" "}
-      </h3>
     </div>
   );
 };
