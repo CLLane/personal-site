@@ -72,6 +72,7 @@ main {
 
 .landing-background__image {
   width: 100%;
+  height: 100vh;;
   z-index: 0;
 }
 
@@ -83,8 +84,8 @@ main {
 .landing-text__p {
   position: absolute;
   width: 100%;
-  text-align: center;
-  bottom: 50%;
+  /* text-align: center; */
+  bottom: 33%;
   color: white;
   font-size: 50px;
 }

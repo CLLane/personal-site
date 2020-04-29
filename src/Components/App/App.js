@@ -57,18 +57,25 @@ class App extends Component {
             <div className="landing-img__div">
               <img
                 className="landing-background__image"
-                src="https://www.canva.com/learn/wp-content/uploads/2016/01/Patterns-3-03.jpg"
+                src="https://i.pinimg.com/originals/73/a8/8e/73a88ecbd4975baa42761451d144445e.jpg"
               ></img>
-              <p className="landing-text__p">This is Chris Lane's Website</p>
+              <div className="landing-text__p">
+                <img
+                  src="https://fontmeme.com/permalink/200429/035542dad20b38cc2d6b4370af9226fb.png"
+                  alt="script-fonts"
+                  border="0"
+                ></img>
+
+              </div>
             </div>
-            <div className='component_divider__div'>
-            <Resume></Resume>
+            <div className="component_divider__div">
+              <Resume></Resume>
             </div>
-            <div className='component_divider__div'>
-            <Projects></Projects>
+            <div className="component_divider__div">
+              <Projects></Projects>
             </div>
-            <div className='component_divider__div'>
-            <Bio></Bio>
+            <div className="component_divider__div">
+              <Bio></Bio>
             </div>
 
             {/* <div className="chat-box">
