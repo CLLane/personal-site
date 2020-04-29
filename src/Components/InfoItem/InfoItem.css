@@ -9,13 +9,13 @@
   background: none;
   width: 6vw;
   height: 11vh;
-  position: absolute;
+  /* position: absolute; */
 }
 .info_item__bio:hover, .info_item__home:hover, .info_item__projects:hover, .info_item__resume:hover {
   cursor: pointer;
   border: 5px solid skyblue;
 }
-
+/* 
 .info_item__home {
 position: absolute;
  margin-left: -11vh;
@@ -37,7 +37,7 @@ position: absolute;
   position: absolute;
  margin-left: 18vh;
  margin-top: 27vh;
-}
+} */
 
 .nav_tag {
   font-size: small;
