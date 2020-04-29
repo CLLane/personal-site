@@ -15,7 +15,7 @@ export class Response extends Component {
       <>
         {this.state.input === 0 && (
           <p className="typewriter">
-            Hi, I'm Chris. Welcome to my site. Click Enter to continue.
+            Welcome to Chris Lane's Website.
           </p>
         )}
         {this.state.input === 1 && (

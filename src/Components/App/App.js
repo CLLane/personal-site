@@ -51,58 +51,82 @@ class App extends Component {
     console.log('this.state.landingStatus', this.state.landingStatus)
     if (this.state.landingStatus === "home") {
       return (
-        <div>
+        <>
           <Nav changePage={this.changePage}></Nav>
           <main>
-            <div className="chat-box">
+            <div className="landing-img__div">
+              <img
+                className="landing-background__image"
+                src="https://i.pinimg.com/originals/73/a8/8e/73a88ecbd4975baa42761451d144445e.jpg"
+              ></img>
+              <div className="landing-text__p">
+                <img
+                  src="https://fontmeme.com/permalink/200429/035542dad20b38cc2d6b4370af9226fb.png"
+                  alt="script-fonts"
+                  border="0"
+                ></img>
+
+              </div>
+            </div>
+            <div className="component_divider__div">
+              <Bio></Bio>
+            </div>
+            <div className="component_divider__div">
+              <Resume></Resume>
+            </div>
+            <div className="component_divider__div">
+              <Projects></Projects>
+            </div>
+
+            {/* <div className="chat-box">
               <img className="avatar" src={avatar}></img>
               {this.state.input == 0 && (
                 <Response
+                input={this.state.input}
+                results={this.state.results}
+                ></Response>
+                )}
+                {this.state.input == 1 && (
+                  <Response
                   input={this.state.input}
                   results={this.state.results}
-                ></Response>
-              )}
-              {this.state.input == 1 && (
-                <Response
-                  input={this.state.input}
-                  results={this.state.results}
-                ></Response>
-              )}
-              {this.state.input == 2 && (
-                <Response
-                  input={this.state.input}
-                  results={this.state.results}
-                ></Response>
-              )}
-              {this.state.input >= 3 && (
-                <Response
-                  input={this.state.input}
-                  results={this.state.results}
-                ></Response>
-              )}
-              {this.state.promptStatus === true && this.state.results && (
-                <p>
-                  Looks like you want to see more than one thing please chooose
-                  one :
-                  <Prompt
+                  ></Response>
+                  )}
+                  {this.state.input == 2 && (
+                    <Response
+                    input={this.state.input}
                     results={this.state.results}
-                    changePage={this.changePage}
-                  ></Prompt>
-                </p>
-              )}
-            </div>
-            {this.state.input >= 3 && (
-              <div className="response_container">
-                <Form setUserResults={this.setUserResults}></Form>
-              </div>
-            )}
+                    ></Response>
+                    )}
+                    {this.state.input >= 3 && (
+                      <Response
+                      input={this.state.input}
+                      results={this.state.results}
+                      ></Response>
+                      )}
+                      {this.state.promptStatus === true && this.state.results && (
+                        <p>
+                        Looks like you want to see more than one thing please chooose
+                        one :
+                        <Prompt
+                        results={this.state.results}
+                        changePage={this.changePage}
+                        ></Prompt>
+                        </p>
+                        )} */
+            /* </div> */
+            /* {this.state.input >= 3 && (
+                          <div className="response_container">
+                          <Form setUserResults={this.setUserResults}></Form>
+                          </div>
+                        )} */}
           </main>
-          <Route exact={true} path='/Home' component={home} />
+          <Route exact={true} path="/Home" component={home} />
           <Route exact={true} path="/Commands" component={PopUp} />
           <Route exact={true} path="/Bio" component={Bio} />
           <Route exact={true} path="/Projects" component={Projects} />
           <Route exact={true} path="/Resume" component={Resume} />
-        </div>
+        </>
       );
     } else if (this.state.landingStatus === "resume") {
       return (

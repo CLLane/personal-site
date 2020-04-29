@@ -1,0 +1,46 @@
+.info_item__home,
+.info_item__resume,
+.info_item__projects,
+.info_item__bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100% 100% 100% 100%;
+  background: none;
+  width: 7vw;
+  height: 13vh;
+  /* position: absolute; */
+}
+.info_item__bio:hover, .info_item__home:hover, .info_item__projects:hover, .info_item__resume:hover {
+  cursor: pointer;
+  border: 3px solid rgb(135, 206, 235, .8);
+  background: rgb(135, 206, 235, .6)
+}
+/* 
+.info_item__home {
+position: absolute;
+ margin-left: -11vh;
+  margin-top: 10vh;
+  
+} 
+.info_item__bio {
+position: absolute;
+ margin-left: -.5vh;
+ margin-top: 14vh;
+}
+.info_item__projects{
+position: absolute;
+ margin-left: 9.75vh;
+ margin-top: 19vh;
+} 
+
+.info_item__resume {
+  position: absolute;
+ margin-left: 18vh;
+ margin-top: 27vh;
+} */
+
+.nav_tag {
+  font-size: large;
+  color: whitesmoke;
+}
