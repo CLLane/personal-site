@@ -1,5 +1,55 @@
 .project-container__div {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+}
+.project-image {
+
+  border-radius: 8px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+.project_title {
+  align-self: center;
+  margin: 5vh;
+  text-decoration: underline;
+  font-size: xx-large;
+  font-weight: 900;
+}
+.project_tech__container {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+.project_p {
+  padding-left: 15vh;
+  padding-right: 15vh;
+  text-align: center;
+}
+
+.projects_secondRow {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.link_icon {
+  width: 3.5vw;
+}
+.link_icon:hover {
+  cursor: pointer;
+}
+.project_link__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+h3 {
+  margin-right: 3vh;
 }

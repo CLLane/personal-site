@@ -3,10 +3,8 @@ import { Route, Link } from "react-router-dom";
 import avatar from "../../Images/avatar.svg";
 import upArrow from "../../Images/up-arrow.svg";
 import home from '../App/App.js'
-import { Response } from "../Response/Response";
+import { Social } from "../Social/Social";
 import { PopUp } from "../PopUp/PopUp";
-import { Prompt } from "../Prompt/Prompt";
-import { Form } from "../Form/Form";
 import { Bio } from "../Bio/Bio";
 import { Projects } from "../Projects/Projects";
 import { Resume } from "../Resume/Resume";
@@ -65,61 +63,22 @@ class App extends Component {
                   alt="script-fonts"
                   border="0"
                 ></img>
-
               </div>
+            </div>
+            <div className='social_container__div'>
+              <Social></Social>
             </div>
             <div className="component_divider__div">
               <Bio></Bio>
             </div>
             <div className="component_divider__div">
-              <Resume></Resume>
-            </div>
-            <div className="component_divider__div">
               <Projects></Projects>
             </div>
+            <div className="component_divider__div">
+              <Resume></Resume>
+            </div>
 
-            {/* <div className="chat-box">
-              <img className="avatar" src={avatar}></img>
-              {this.state.input == 0 && (
-                <Response
-                input={this.state.input}
-                results={this.state.results}
-                ></Response>
-                )}
-                {this.state.input == 1 && (
-                  <Response
-                  input={this.state.input}
-                  results={this.state.results}
-                  ></Response>
-                  )}
-                  {this.state.input == 2 && (
-                    <Response
-                    input={this.state.input}
-                    results={this.state.results}
-                    ></Response>
-                    )}
-                    {this.state.input >= 3 && (
-                      <Response
-                      input={this.state.input}
-                      results={this.state.results}
-                      ></Response>
-                      )}
-                      {this.state.promptStatus === true && this.state.results && (
-                        <p>
-                        Looks like you want to see more than one thing please chooose
-                        one :
-                        <Prompt
-                        results={this.state.results}
-                        changePage={this.changePage}
-                        ></Prompt>
-                        </p>
-                        )} */
-            /* </div> */
-            /* {this.state.input >= 3 && (
-                          <div className="response_container">
-                          <Form setUserResults={this.setUserResults}></Form>
-                          </div>
-                        )} */}
+            
           </main>
           <Route exact={true} path="/Home" component={home} />
           <Route exact={true} path="/Commands" component={PopUp} />

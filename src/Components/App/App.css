@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background: #f5e4b7;
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -28,29 +30,7 @@ main {
   display: flex;
   justify-content: center;
 }
-/* .command_info {
-  width: 19%;
-  height: 75%;
-  background-color: lightblue;
-  border-radius: 10px;
-  padding: 5px;
-} */
-/* .command_button--container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 40vh;
-  z-index: 99;
-} */
-/* .command_button {
-  border: none;
-  width: 100px;
-  border-radius: 25px;
-  color: white;
-  background-color: lightblue;
-  box-shadow: 0px 0px 10px grey;
-} */
+
 .chat-box {
   display: flex;
   align-items: center;
@@ -84,8 +64,16 @@ main {
 .landing-text__p {
   position: absolute;
   width: 100%;
-  /* text-align: center; */
   bottom: 33%;
   color: white;
   font-size: 50px;
+}
+
+.social_container__div {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
 }
