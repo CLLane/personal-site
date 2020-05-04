@@ -5,8 +5,8 @@
   align-items: center;
 }
 .project-image {
-
-  border-radius: 8px;
+  width: 65vw;
+  border-radius: 10px;
 }
 
 .project {
@@ -32,8 +32,8 @@
 }
 
 .projects_secondRow {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 4vh;
+  /* margin-bottom: 2vh; */
   display: flex;
   justify-content: space-evenly;
   width: 100%;

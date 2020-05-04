@@ -19,6 +19,15 @@ export const Projects = () => {
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/HomeScreen.png?itok=khB_dNLF"
           className="project-image"
         ></img>
+        <div className="project_p">
+          <p>
+            A random hex-code generator that allows a user to create projects
+            and save palettes to projects. The app allows user to login or
+            create a new account. The backend to this app was created using
+            node.js and is set up to allow a user to register, create, delete,
+            and edit color palettes.
+          </p>
+        </div>
         <div className="projects_secondRow">
           <div className="project_tech__container">
             <h3>TechStack</h3>
@@ -46,21 +55,25 @@ export const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="project_p">
-        <p>
-          A random hex-code generator that allows a user to create projects and
-          save palettes to projects. The app allows user to login or create a
-          new account. The backend to this app was created using node.js and is
-          set up to allow a user to register, create, delete, and edit color
-          palettes.
-        </p>
-      </div>
       <h2 className="project_title">Launch Log</h2>
       <div className="project-container__div">
         <img
           src="https://alumni.turing.io/sites/default/files/styles/project_screenshot/public/project_screenshots/Home.png?itok=988q-cEX"
           className="project-image"
         ></img>
+        <div className="project_p">
+          <p>
+            Launch Log allows users to search the Launch Library API for
+            upcoming space launches around the world as well as research
+            companies, specific rockets, and missions. The application is
+            bootstrapped with Create React App utilizes React Router for page
+            navigation, Redux to assist in data management, PropTypes to ensure
+            the correct data types are passed within the program, and a testing
+            suite utilizing Enzyme and Jest. Tests cover UI changes, event
+            simulation, async fetch calls, React state changes, and Redux store
+            updates.
+          </p>
+        </div>
         <div className="projects_secondRow">
           <div className="project_tech__container">
             <h3>TechStack</h3>
@@ -86,20 +99,6 @@ export const Projects = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className="project_p">
-        <p>
-          Launch Log, was built over the course of six days utilizing an agile
-          workflow, and allows users to search the Launch Library API for
-          upcoming space launches around the world as well as do research into
-          companies, specific rockets, and missions. The application is
-          bootstrapped with Create React App utilizes React Router for page
-          navigation, Redux to assist in data management, PropTypes to ensure
-          the correct data types are passed within the program, and a testing
-          suite utilizing Enzyme and Jest. Tests cover UI changes, event
-          simulation, async fetch calls, React state changes, and Redux store
-          updates.
-        </p>
       </div>
     </div>
   );
